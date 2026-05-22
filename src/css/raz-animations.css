@@ -1,0 +1,112 @@
+.section-glow {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.section-glow > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.82;
+  background:
+    linear-gradient(125deg, var(--section-glow-primary), transparent 34%),
+    linear-gradient(305deg, var(--section-glow-accent), transparent 32%),
+    linear-gradient(180deg, transparent 48%, var(--section-glow-secondary));
+}
+
+.glow-right::before {
+  background:
+    linear-gradient(250deg, var(--section-glow-primary), transparent 38%),
+    linear-gradient(25deg, transparent 58%, var(--section-glow-secondary)),
+    linear-gradient(180deg, transparent 18%, var(--section-glow-accent), transparent 68%);
+}
+
+.glow-center::before {
+  background:
+    linear-gradient(90deg, transparent 0%, var(--section-glow-primary) 48%, transparent 100%),
+    linear-gradient(180deg, var(--section-glow-accent), transparent 44%),
+    linear-gradient(0deg, var(--section-glow-secondary), transparent 42%);
+}
+
+.glow-left::before {
+  background:
+    linear-gradient(110deg, var(--section-glow-secondary), transparent 36%),
+    linear-gradient(290deg, transparent 54%, var(--section-glow-primary)),
+    linear-gradient(180deg, transparent 28%, var(--section-glow-accent), transparent 76%);
+}
+
+.bento-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  box-shadow: var(--shadow-premium);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+.hero-floating {
+  animation: heroFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  pointer-events: none;
+  background-color: var(--color-primary);
+  opacity: 0;
+  z-index: 60;
+  will-change: transform;
+}
+
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 2px solid var(--color-primary);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 59;
+  will-change: transform;
+}
+
+.cursor-hover-active .cursor-dot {
+  transform: scale(1.2);
+}
+
+.cursor-hover-active .cursor-outline {
+  width: 54px;
+  height: 54px;
+  background-color: rgba(212, 175, 55, 0.25);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-outline {
+    display: none;
+  }
+}

@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Raz| Building Future-Ready Web Solutions </title>
+  <meta
+  name="description"
+  content="Professional WordPress developer portfolio showcasing modern web applications, high-performance architecture, and clean user experiences."
+  />
+  <meta name="keywords" content="developer, wordpress, software engineer, portfolio, tailwind css, vite" />
+  <meta property="og:title" content="Coding Raz| Building Future-Ready Web Solutions" />
+  <meta property="og:description" content="Professional developer portfolio showcasing engineering excellence." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+  />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="bg-portfolio-bg text-portfolio-text antialiased">
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+  <div
+  class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-portfolio-primary via-portfolio-accent to-portfolio-secondary z-50 transition-all duration-100"
+  id="scroll-bar"
+  style="width: 0%"
+  ></div>
+
+<header class="fixed top-0 left-0 w-full glass-navbar z-40 transition-all duration-300" id="main-nav">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a aria-label="Coding Raz" class="brand-logo" href="/">
+      <img
+        alt="Coding Raz"
+        class="brand-logo-img brand-logo-light"
+        height="42"
+        src="/src/assets/icons/coding-raz-light.svg"
+      />
+      <img
+        alt="Coding Raz"
+        class="brand-logo-img brand-logo-dark"
+        height="42"
+        src="/src/assets/icons/coding-raz-dark.svg"
+      />
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-8">
+      <a class="nav-link text-sm font-medium text-[var(--text-main)] hover:text-[var(--color-secondary)] transition-colors" href="#about">About</a>
+      <a class="nav-link text-sm font-medium text-[var(--text-main)] hover:text-[var(--color-secondary)] transition-colors" href="#skills">Skills</a>
+      <a class="nav-link text-sm font-medium text-[var(--text-main)] hover:text-[var(--color-secondary)] transition-colors" href="#services">Services</a>
+      <a class="nav-link text-sm font-medium text-[var(--text-main)] hover:text-[var(--color-secondary)] transition-colors" href="#portfolio">Projects</a>
+      <a class="nav-link text-sm font-medium text-[var(--text-main)] hover:text-[var(--color-secondary)] transition-colors" href="#experience">Experience</a>
+      <a class="nav-link text-sm font-medium text-[var(--text-main)] hover:text-[var(--color-secondary)] transition-colors" href="#contact">Contact</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4">
+      <div class="mode-toggle">
+        <input aria-label="Toggle dark mode" id="mode-switch" role="switch" type="checkbox" />
+        <label class="toggle-label" for="mode-switch">
+          <div class="thumb">
+            <svg class="sun-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" x2="12" y1="1" y2="3"></line>
+              <line x1="12" x2="12" y1="21" y2="23"></line>
+              <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+              <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+              <line x1="1" x2="3" y1="12" y2="12"></line>
+              <line x1="21" x2="23" y1="12" y2="12"></line>
+              <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+              <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </div>
+        </label>
+      </div>
+      <a class="btn-primary-solid px-5 py-2.5 rounded-xl text-sm font-medium transition-all transform hover:-translate-y-0.5" href="#contact">Hire Me</a>
+    </div>
+
+    <div class="flex items-center space-x-3 md:hidden">
+      <div class="mode-toggle">
+        <input aria-label="Toggle dark mode mobile" id="mode-switch-mob" role="switch" type="checkbox" />
+        <label class="toggle-label" for="mode-switch-mob">
+          <div class="thumb">
+            <svg class="sun-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" x2="12" y1="1" y2="3"></line>
+              <line x1="12" x2="12" y1="21" y2="23"></line>
+              <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+              <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+              <line x1="1" x2="3" y1="12" y2="12"></line>
+              <line x1="21" x2="23" y1="12" y2="12"></line>
+              <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+              <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" fill="currentColor" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </div>
+        </label>
+      </div>
+      <button aria-label="Open Navigation Menu" class="p-2 rounded-xl border border-portfolio-border text-portfolio-text" id="menu-toggle-hamburger"><i class="fa-solid fa-bars-staggered text-xl"></i></button>
+    </div>
+  </div>
+
+  <div class="hidden md:hidden absolute top-20 left-0 w-full glass-card border-t-0 border-x-0 rounded-b-2xl py-6 px-4 space-y-4" id="mobile-menu-dropdown">
+    <a class="block py-2 text-[var(--text-main)] font-medium hover:text-[var(--color-secondary)] transition-colors" href="#about">About</a>
+    <a class="block py-2 text-[var(--text-main)] font-medium hover:text-[var(--color-secondary)] transition-colors" href="#skills">Skills</a>
+    <a class="block py-2 text-[var(--text-main)] font-medium hover:text-[var(--color-secondary)] transition-colors" href="#services">Services</a>
+    <a class="block py-2 text-[var(--text-main)] font-medium hover:text-[var(--color-secondary)] transition-colors" href="#portfolio">Projects</a>
+    <a class="block py-2 text-[var(--text-main)] font-medium hover:text-[var(--color-secondary)] transition-colors" href="#experience">Experience</a>
+    <a class="block py-2 text-[var(--text-main)] font-medium hover:text-[var(--color-secondary)] transition-colors" href="#contact">Contact</a>
+    <a class="btn-primary-solid block text-center py-3 rounded-xl font-medium shadow-md" href="#contact">Hire Me</a>
+  </div>
+</header>
+
+<main>
+        <!-- HERO SECTION -->
+      <section class='section-glow glow-right relative min-h-screen flex items-center pt-24 overflow-hidden' id='hero'>
+        <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 w-full grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10'>
+          <div class='order-2 md:order-1 md:col-span-7 space-y-6 text-center md:text-left'>
+
+            <!-- Live Status Badge Notification -->
+            <div class='inline-flex items-center space-x-2.5 px-4 py-2 rounded-full glass-card border-portfolio-border text-xs font-semibold text-portfolio-secondary tracking-wide uppercase mx-auto md:mx-0 shadow-sm'>
+              <span class='flex h-2 w-2 relative'>
+                <span class='animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75'></span>
+                <span class='relative inline-flex rounded-full h-2 w-2 bg-emerald-500'></span>
+              </span>
+              <span>Available for New Projects</span>
+            </div>
+
+            <!-- Animated Typography Title -->
+            <h1 class='text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.5]'>
+              Building Premium <br class='hidden sm:block'/>
+              <span class='hero-gradient-text leading-[1.5]'>Digital Experiences</span>
+            </h1>
+            <!-- Subtitle Core Dynamic Content -->
+          <p class='text-lg md:text-xl text-portfolio-muted max-w-2xl mx-auto md:mx-0 font-medium leading-relaxed'>I am a specialized 
+            <span class='text-portfolio-text font-semibold border-b-2 border-portfolio-primary' id='typewriter-text'></span> focused on building robust architectures, custom ecosystem integrations, and high-performance layouts.</p>
+            <!-- CTA Operations Button Blocks -->
+            <div class='flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-4'>
+            <a class='btn-primary-solid w-full sm:w-auto text-center px-8 py-4 rounded-xl font-medium transition-all transform hover:-translate-y-0.5' href='#portfolio'>Explore My Work <i class='fa-solid fa-arrow-right ml-2 text-sm'></i></a>
+            <a class='w-full sm:w-auto text-center px-8 py-4 rounded-xl glass-card text-portfolio-text font-medium hover:bg-portfolio-hover transition-all border border-portfolio-border' href='#contact'>Let&#39;s Talk</a>
+            </div>
+            <!-- Social Media Integrations Grid Linkages -->
+            <div class='flex items-center justify-center md:justify-start space-x-5 pt-6 text-portfolio-muted text-xl'>
+            <a aria-label='GitHub Profile' class='hover:text-portfolio-primary transition-colors' href='https://github.com/codingraz'> <i class='fa-brands fa-github'></i></a>
+            <a aria-label='LinkedIn Profile' class='hover:text-portfolio-primary transition-colors' href='https://www.linkedin.com/in/ariyanraz/'> <i class='fa-brands fa-linkedin'></i></a>
+            <a aria-label='Twitter Profile' class='hover:text-portfolio-primary transition-colors' href='https://x.com/codingrazzz'> <i class='fa-brands fa-twitter'></i></a>
+            <a aria-label='Facebook Profile' class='hover:text-portfolio-primary transition-colors' href='https://www.facebook.com/editzrazz'> <i class='fa-brands fa-facebook'></i></a>
+          </div>
+        </div>
+          <!-- Right Visual Content Space Representation -->
+          <div class='order-1 md:order-2 md:col-span-5 flex justify-center items-center relative'>
+            <div class='hero-floating relative z-10 w-full max-w-[20rem] sm:max-w-sm lg:max-w-md'>
+              <div class='bento-card p-3 rotate-3 hover:rotate-0 transition-transform duration-700'> 
+                <img alt='Ariyan Raz' class='rounded-xl grayscale-0 md:grayscale-[50%] md:hover:grayscale-0 transition-all duration-700 w-full object-cover aspect-square' height='400' src='/src/assets/images/ariyan-raz.webp' width='400'/>
+              </div>
+              <div class='absolute -bottom-8 -right-3 sm:-right-5 bento-card p-4 sm:p-6 shadow-2xl animate-pulse'>
+                <p class='text-2xl sm:text-3xl font-bold text-portfolio-secondary'>120+</p>
+                <p class='text-[10px] sm:text-xs text-portfolio-muted tracking-tight uppercase'>Projects Completed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="section-glow glow-left py-20 md:py-32 reveal-hidden" id="about">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">About Me</h2>
+          <p class="text-3xl md:text-4xl font-bold tracking-tight">How I Work &amp; What I Build</p>
+          <div class="h-1 w-12 bg-portfolio-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 text-portfolio-muted leading-relaxed text-base md:text-lg">
+            <p>I'm <strong class="text-portfolio-text font-semibold">Raz, a WordPress &amp; App Developer</strong> with 5 years of hands-on experience building websites and Android apps for creators, local business owners, and agencies. I focus on building products that look clean, load fast, and are easy to manage after launch.</p>
+            <p>From portfolio sites and landing pages to LMS platforms, e-commerce stores, and Android apps, I keep my workflow practical: clear planning, clean code structure, and delivery that supports real business goals instead of just visual polish.</p>
+            <div class="p-5 rounded-2xl bg-portfolio-primary/5 border border-portfolio-primary/10 text-portfolio-text font-medium flex items-start space-x-4">
+              <i class="fa-solid fa-quote-left text-portfolio-primary text-xl mt-1"></i>
+              <span>"Good development is simple: build what users need, keep it fast, and make it easy for the business to grow."</span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-3 hover:border-portfolio-primary/30 transition-colors duration-300">
+              <div class="w-12 h-12 rounded-xl bg-portfolio-primary/10 flex items-center justify-center text-portfolio-primary text-xl"> <i class="fa-solid fa-bolt"></i></div>
+              <h3 class="text-lg font-bold text-portfolio-text">WordPress Delivery</h3>
+              <p class="text-sm text-portfolio-muted">Custom WordPress websites built for speed, clarity, and easy day-to-day management.</p>
+            </div>
+            <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-3 hover:border-portfolio-accent/30 transition-colors duration-300">
+              <div class="w-12 h-12 rounded-xl bg-portfolio-accent/10 flex items-center justify-center text-portfolio-accent text-xl"> <i class="fa-solid fa-cubes"></i></div>
+              <h3 class="text-lg font-bold text-portfolio-text">Conversion-Focused UI</h3>
+              <p class="text-sm text-portfolio-muted">Landing pages and portfolio layouts designed to communicate value and drive action.</p>
+            </div>
+            <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-3 hover:border-portfolio-secondary/30 transition-colors duration-300">
+              <div class="w-12 h-12 rounded-xl bg-portfolio-secondary/10 flex items-center justify-center text-portfolio-secondary text-xl"> <i class="fa-solid fa-shield-halved"></i></div>
+              <h3 class="text-lg font-bold text-portfolio-text">App Development</h3>
+              <p class="text-sm text-portfolio-muted">Android apps using Kotlin/Java with Firebase backend integration for scalable features.</p>
+            </div>
+            <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-3 hover:border-portfolio-primary/30 transition-colors duration-300">
+              <div class="w-12 h-12 rounded-xl bg-portfolio-primary/10 flex items-center justify-center text-portfolio-primary text-xl"> <i class="fa-solid fa-magnifying-glass"></i></div>
+              <h3 class="text-lg font-bold text-portfolio-text">Performance Mindset</h3>
+              <p class="text-sm text-portfolio-muted">Clean architecture and optimized assets to keep websites lightweight and reliable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-center py-20 md:py-32 bg-portfolio-surface/20 border-y border-portfolio-border reveal-hidden" id="skills">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">Expertise Matrix</h2>
+          <p class="text-3xl md:text-4xl font-bold tracking-tight">Tools I Use in Real Projects</p>
+          <div class="h-1 w-12 bg-portfolio-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-6">
+            <h3 class="text-lg font-bold text-portfolio-text flex items-center space-x-3">
+              <i class="fa-solid fa-layer-group text-portfolio-primary"></i>
+              <span>WordPress &amp; Frontend</span>
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">WordPress Theme Development</span>
+                  <span class="text-portfolio-text">95%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-primary" style="width: 95%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">WooCommerce Store Setup</span>
+                  <span class="text-portfolio-text">92%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-primary" style="width: 90%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">HTML/CSS/JavaScript UI</span>
+                  <span class="text-portfolio-text">88%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-primary" style="width: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-6">
+            <h3 class="text-lg font-bold text-portfolio-text flex items-center space-x-3">
+              <i class="fa-solid fa-server text-portfolio-accent"></i>
+              <span>Backend &amp; Platform</span>
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">PHP Development</span>
+                  <span class="text-portfolio-text">88%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-accent" style="width: 88%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">WordPress Customization</span>
+                  <span class="text-portfolio-text">93%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-accent" style="width: 95%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">Firebase Integration</span>
+                  <span class="text-portfolio-text">86%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-accent" style="width: 90%"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-6">
+            <h3 class="text-lg font-bold text-portfolio-text flex items-center space-x-3">
+              <i class="fa-solid fa-sliders text-portfolio-secondary"></i>
+              <span>Android App Development</span>
+            </h3>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">Kotlin App Development</span>
+                  <span class="text-portfolio-text">88%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-secondary" style="width: 95%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">Java Android Development</span>
+                  <span class="text-portfolio-text">85%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-secondary" style="width: 92%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm font-medium mb-1.5">
+                  <span class="text-portfolio-muted">App + Firebase Backend Flow</span>
+                  <span class="text-portfolio-text">84%</span>
+                </div>
+                <div class="w-full h-1.5 bg-portfolio-border rounded-full overflow-hidden"> <div class="h-full bg-portfolio-secondary" style="width: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-right py-20 md:py-32 reveal-hidden" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">Services Portfolio</h2>
+          <p class="text-3xl md:text-4xl font-bold tracking-tight">Services I Offer</p>
+          <div class="h-1 w-12 bg-portfolio-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-4 hover:border-portfolio-primary/30 transform hover:-translate-y-1 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-portfolio-primary/10 flex items-center justify-center text-portfolio-primary text-xl"> <i class="fa-brands fa-wordpress"></i></div>
+            <h3 class="text-lg font-bold text-portfolio-text">WordPress Website Development</h3>
+            <p class="text-sm text-portfolio-muted">Business-ready WordPress websites with clean structure, responsive design, and easy content management.</p>
+          </div>
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-4 hover:border-portfolio-accent/30 transform hover:-translate-y-1 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-portfolio-accent/10 flex items-center justify-center text-portfolio-accent text-xl"> <i class="fa-solid fa-cart-shopping"></i></div>
+            <h3 class="text-lg font-bold text-portfolio-text">Landing Page &amp; Portfolio Website</h3>
+            <p class="text-sm text-portfolio-muted">High-converting landing pages and personal/brand portfolios tailored for creators and growing businesses.</p>
+          </div>
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-4 hover:border-portfolio-secondary/30 transform hover:-translate-y-1 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-portfolio-secondary/10 flex items-center justify-center text-portfolio-secondary text-xl"> <i class="fa-solid fa-gauge-high"></i></div>
+            <h3 class="text-lg font-bold text-portfolio-text">LMS &amp; E-Commerce Store Setup</h3>
+            <p class="text-sm text-portfolio-muted">Complete LMS and online store setup with practical structure, smooth user flow, and scalable management.</p>
+          </div>
+          <div class="p-6 rounded-2xl glass-card border-portfolio-border space-y-4 hover:border-portfolio-primary/30 transform hover:-translate-y-1 transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-portfolio-primary/10 flex items-center justify-center text-portfolio-primary text-xl"> <i class="fa-solid fa-code-branch"></i></div>
+            <h3 class="text-lg font-bold text-portfolio-text">Android App Development</h3>
+            <p class="text-sm text-portfolio-muted">Android apps built with Kotlin/Java and Firebase backend, including earning apps, e-commerce apps, and VPN app solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-left py-20 md:py-32 bg-portfolio-surface/20 border-y border-portfolio-border reveal-hidden" id="portfolio">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div class="space-y-3 text-left">
+            <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">Works</h2>
+            <p class="text-3xl md:text-4xl font-bold tracking-tight">Engineering Case Studies</p>
+          </div>
+          <div class="flex items-center space-x-2 border border-portfolio-border p-1 rounded-xl bg-portfolio-bg max-w-full overflow-x-auto no-scrollbar" id="filter-tabs-container">
+            <button class="filter-btn is-active px-4 py-2 rounded-lg text-xs md:text-sm font-medium" data-filter="all">All Works</button>
+            <button class="filter-btn px-4 py-2 rounded-lg text-xs md:text-sm font-medium" data-filter="wordpress">WordPress</button>
+            <button class="filter-btn px-4 py-2 rounded-lg text-xs md:text-sm font-medium" data-filter="php-laravel">PHP Laravel</button>
+            <button class="filter-btn px-4 py-2 rounded-lg text-xs md:text-sm font-medium" data-filter="custom">Custom</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-grid-container">
+          <div class="project-card-item h-[30rem] rounded-2xl glass-card border-portfolio-border overflow-hidden group transition-all duration-300 flex flex-col" data-category="wordpress">
+            <div class="h-3/5 border-b border-portfolio-border relative overflow-hidden">
+              <img alt="E-Commerce" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/src/assets/images/project-image-1.webp" />
+            </div>
+            <div class="h-2/5 p-4 space-y-2 flex flex-col justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2.5 py-1 rounded-md bg-portfolio-primary/10 text-portfolio-primary text-xs font-semibold uppercase tracking-wider">WordPress</span>
+                <span class="px-2.5 py-1 rounded-md bg-portfolio-border text-portfolio-muted text-xs font-medium">WooCommerce | Tutor</span>
+              </div>
+              <h3 class="text-lg font-bold text-portfolio-text group-hover:text-portfolio-primary transition-colors whitespace-nowrap overflow-hidden">'Learn With Shuvo' For LMS</h3>
+              <p class="text-sm text-portfolio-muted line-clamp-2">A complete LMS platform with course pages, student enrollment flow, and optimized learning dashboard experience.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-portfolio-border/40 text-sm">
+                <a class="text-portfolio-muted hover:text-portfolio-text flex items-center gap-1.5" href="#">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a class="text-portfolio-muted hover:text-portfolio-text flex items-center gap-1.5" href="#">
+                  <i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-item h-[30rem] rounded-2xl glass-card border-portfolio-border overflow-hidden group transition-all duration-300 flex flex-col" data-category="wordpress">
+            <div class="h-3/5 border-b border-portfolio-border relative overflow-hidden">
+              <img alt="WordPress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/src/assets/images/project-image-2.webp" />
+            </div>
+            <div class="h-2/5 p-4 space-y-2 flex flex-col justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2.5 py-1 rounded-md bg-portfolio-accent/10 text-portfolio-accent text-xs font-semibold uppercase tracking-wider">WordPress</span>
+                <span class="px-2.5 py-1 rounded-md bg-portfolio-border text-portfolio-muted text-xs font-medium">WooCommerce</span>
+              </div>
+              <h3 class="text-lg font-bold text-portfolio-text group-hover:text-portfolio-accent transition-colors whitespace-nowrap overflow-hidden">'Solevia' For Shoe E-Commerce</h3>
+              <p class="text-sm text-portfolio-muted line-clamp-2">Modern shoe e-commerce build with clean product browsing, conversion-focused cart flow, and fast storefront performance.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-portfolio-border/40 text-sm">
+                <a class="text-portfolio-muted hover:text-portfolio-text flex items-center gap-1.5" href="#">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a class="text-portfolio-muted hover:text-portfolio-text flex items-center gap-1.5" href="#">
+                  <i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card-item h-[30rem] rounded-2xl glass-card border-portfolio-border overflow-hidden group transition-all duration-300 flex flex-col" data-category="custom">
+            <div class="h-3/5 border-b border-portfolio-border relative overflow-hidden">
+              <img alt="WordPress" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/src/assets/images/project-image-3.webp" />
+            </div>
+            <div class="h-2/5 p-4 space-y-2 flex flex-col justify-between">
+              <div class="flex gap-2 flex-wrap">
+                <span class="px-2.5 py-1 rounded-md bg-portfolio-secondary/10 text-portfolio-secondary text-xs font-semibold uppercase tracking-wider">WordPress</span>
+                <span class="px-2.5 py-1 rounded-md bg-portfolio-border text-portfolio-muted text-xs font-medium">WooCommerce</span>
+              </div>
+              <h3 class="text-lg font-bold text-portfolio-text group-hover:text-portfolio-secondary transition-colors whitespace-nowrap overflow-hidden">'Dokander Vai' For Gadgets E-Commerce</h3>
+              <p class="text-sm text-portfolio-muted line-clamp-2">Gadget-focused e-commerce solution with category-led discovery, streamlined checkout journey, and scalable catalog structure.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-portfolio-border/40 text-sm">
+                <a class="text-portfolio-muted hover:text-portfolio-text flex items-center gap-1.5" href="#">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                <a class="text-portfolio-muted hover:text-portfolio-text flex items-center gap-1.5" href="#">
+                  <i class="fa-brands fa-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-center py-20 md:py-32 reveal-hidden" id="experience">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">History</h2>
+          <p class="text-3xl md:text-4xl font-bold tracking-tight">Professional Timeline Journey</p>
+          <div class="h-1 w-12 bg-portfolio-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="relative border-l-2 border-portfolio-border pl-6 ml-4 space-y-12">
+          <div class="relative group">
+            <div class="absolute -left-[33px] top-1.5 w-4 h-4 rounded-full bg-portfolio-bg border-4 border-portfolio-primary group-hover:scale-125 transition-transform duration-300"></div>
+            <div class="space-y-2">
+              <span class="text-xs font-bold text-portfolio-primary uppercase tracking-wider">2024 - Present</span>
+              <h3 class="text-xl font-bold text-portfolio-text">Lead Full-Stack Consultant</h3>
+              <p class="text-sm text-portfolio-muted font-medium">Codingraz | Independent Web &amp; App Solutions</p>
+              <p class="text-portfolio-muted text-sm leading-relaxed max-w-3xl">Leading end-to-end web and app delivery under Codingraz, from project planning and interface architecture to performance optimization and custom WordPress/plugin workflows for creators, local businesses, and growing brands.</p>
+            </div>
+          </div>
+          <div class="relative group">
+            <div class="absolute -left-[33px] top-1.5 w-4 h-4 rounded-full bg-portfolio-bg border-4 border-portfolio-accent group-hover:scale-125 transition-transform duration-300"></div>
+            <div class="space-y-2">
+              <span class="text-xs font-bold text-portfolio-accent uppercase tracking-wider">2022 - 2024</span>
+              <h3 class="text-xl font-bold text-portfolio-text">Senior Web Optimizer</h3>
+              <p class="text-sm text-portfolio-muted font-medium">E-Commerce Infrastructure Scaling</p>
+              <p class="text-portfolio-muted text-sm leading-relaxed max-w-3xl">Re-engineered key bottlenecks across e-commerce websites, improving time-to-first-byte (TTFB) and reducing cumulative layout shift (CLS) across desktop and mobile product catalog experiences.</p>
+            </div>
+          </div>
+          <div class="relative group">
+            <div class="absolute -left-[33px] top-1.5 w-4 h-4 rounded-full bg-portfolio-bg border-4 border-portfolio-secondary group-hover:scale-125 transition-transform duration-300"></div>
+            <div class="space-y-2">
+              <span class="text-xs font-bold text-portfolio-secondary uppercase tracking-wider">2021 - 2022</span>
+              <h3 class="text-xl font-bold text-portfolio-text">Junior Web Developer</h3>
+              <p class="text-sm text-portfolio-muted font-medium">Client Projects &amp; Technical Foundation</p>
+              <p class="text-portfolio-muted text-sm leading-relaxed max-w-3xl">Started with hands-on client work including landing pages, portfolio websites, and basic WooCommerce setups while building strong fundamentals in clean structure, responsive UI, and practical speed optimization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-right py-16 bg-gradient-to-r from-portfolio-primary/5 via-portfolio-accent/5 to-portfolio-secondary/5 border-y border-portfolio-border relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center relative z-10">
+        <div class="space-y-2">
+          <p class="text-4xl md:text-5xl font-black text-portfolio-primary tracking-tight counter-metric-item" data-target="5">0</p>
+          <p class="text-xs md:text-sm font-semibold uppercase tracking-wider text-portfolio-muted">Years Experience</p>
+        </div>
+        <div class="space-y-2">
+          <p class="text-4xl md:text-5xl font-black text-portfolio-accent tracking-tight counter-metric-item" data-target="120">0</p>
+          <p class="text-xs md:text-sm font-semibold uppercase tracking-wider text-portfolio-muted">Projects Deployed</p>
+        </div>
+        <div class="space-y-2">
+          <p class="text-4xl md:text-5xl font-black text-portfolio-secondary tracking-tight counter-metric-item" data-target="98">0</p>
+          <p class="text-xs md:text-sm font-semibold uppercase tracking-wider text-portfolio-muted">Happy Clients %</p>
+        </div>
+        <div class="space-y-2">
+          <p class="text-4xl md:text-5xl font-black text-portfolio-primary tracking-tight counter-metric-item" data-target="2500">0</p>
+          <p class="text-xs md:text-sm font-semibold uppercase tracking-wider text-portfolio-muted">Git Commits</p>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-left py-20 md:py-32 reveal-hidden" id="testimonials">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">Reviews</h2>
+          <p class="text-3xl md:text-4xl font-bold tracking-tight">Client Validation &amp; Trust</p>
+          <div class="h-1 w-12 bg-portfolio-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="relative overflow-hidden px-1 sm:px-2">
+          <div class="flex transition-transform duration-500 ease-out" id="testimonial-track-wrapper">
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3">
+              <div class="h-full p-6 md:p-8 rounded-2xl glass-card border-portfolio-border space-y-6 relative">
+                <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-portfolio-primary/10"></i>
+                <p class="text-base text-portfolio-muted leading-relaxed italic">"The SEO architecture and technical optimization gave our platform stronger rankings and cleaner conversion flow across all pages."</p>
+                <div class="flex items-center space-x-4">
+                  <img alt="Mahedi Hasan Shuvo" class="w-12 h-12 rounded-full object-cover border border-portfolio-border" src="/src/assets/images/client-profile-placeholder.webp" />
+                  <div>
+                    <h4 class="font-bold text-portfolio-text text-sm md:text-base">Mahedi Hasan Shuvo</h4>
+                    <p class="text-xs text-portfolio-muted">SEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3">
+              <div class="h-full p-6 md:p-8 rounded-2xl glass-card border-portfolio-border space-y-6 relative">
+                <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-portfolio-accent/10"></i>
+                <p class="text-base text-portfolio-muted leading-relaxed italic">"Our site speed, structured SEO setup, and technical content framework were executed exactly as needed for growth."</p>
+                <div class="flex items-center space-x-4">
+                  <img alt="Zahidul x Sobuj" class="w-12 h-12 rounded-full object-cover border border-portfolio-border" src="/src/assets/images/client-profile-placeholder.webp" />
+                  <div>
+                    <h4 class="font-bold text-portfolio-text text-sm md:text-base">Zahidul x Sobuj</h4>
+                    <p class="text-xs text-portfolio-muted">SEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3">
+              <div class="h-full p-6 md:p-8 rounded-2xl glass-card border-portfolio-border space-y-6 relative">
+                <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-portfolio-secondary/10"></i>
+                <p class="text-base text-portfolio-muted leading-relaxed italic">"The e-commerce structure, SEO direction, and optimization strategy were highly practical and delivered measurable impact."</p>
+                <div class="flex items-center space-x-4">
+                  <img alt="Dokander Vai" class="w-12 h-12 rounded-full object-cover border border-portfolio-border" src="/src/assets/images/client-profile-placeholder.webp" />
+                  <div>
+                    <h4 class="font-bold text-portfolio-text text-sm md:text-base">Dokander Vai</h4>
+                    <p class="text-xs text-portfolio-muted">SEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3">
+              <div class="h-full p-6 md:p-8 rounded-2xl glass-card border-portfolio-border space-y-6 relative">
+                <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-portfolio-primary/10"></i>
+                <p class="text-base text-portfolio-muted leading-relaxed italic">"A solid technical SEO foundation and efficient performance work made a strong difference in visibility and user retention."</p>
+                <div class="flex items-center space-x-4">
+                  <img alt="Zihad Islam" class="w-12 h-12 rounded-full object-cover border border-portfolio-border" src="/src/assets/images/client-profile-placeholder.webp" />
+                  <div>
+                    <h4 class="font-bold text-portfolio-text text-sm md:text-base">Zihad Islam</h4>
+                    <p class="text-xs text-portfolio-muted">SEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-3">
+              <div class="h-full p-6 md:p-8 rounded-2xl glass-card border-portfolio-border space-y-6 relative">
+                <i class="fa-solid fa-quote-right absolute top-8 right-8 text-4xl text-portfolio-accent/10"></i>
+                <p class="text-base text-portfolio-muted leading-relaxed italic">"From SEO planning to execution, the workflow was clean, fast, and reliable for long-term scaling."</p>
+                <div class="flex items-center space-x-4">
+                  <img alt="Ahaduzzaman Ahad" class="w-12 h-12 rounded-full object-cover border border-portfolio-border" src="/src/assets/images/client-profile-placeholder.webp" />
+                  <div>
+                    <h4 class="font-bold text-portfolio-text text-sm md:text-base">Ahaduzzaman Ahad</h4>
+                    <p class="text-xs text-portfolio-muted">SEO and Founder</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-center space-x-4 pt-8">
+            <button aria-label="Previous Review" class="w-10 h-10 rounded-xl border border-portfolio-border flex items-center justify-center hover:bg-portfolio-hover text-portfolio-muted hover:text-portfolio-primary transition-all shadow-sm" id="slider-arrow-prev"> <i class="fa-solid fa-chevron-left text-sm"></i></button>
+            <button aria-label="Next Review" class="w-10 h-10 rounded-xl border border-portfolio-border flex items-center justify-center hover:bg-portfolio-hover text-portfolio-muted hover:text-portfolio-primary transition-all shadow-sm" id="slider-arrow-next"> <i class="fa-solid fa-chevron-right text-sm"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-glow glow-center py-20 md:py-32 bg-portfolio-surface/20 border-t border-portfolio-border reveal-hidden" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <h2 class="text-xs uppercase font-bold tracking-widest text-portfolio-primary">Initiate</h2>
+          <p class="text-3xl md:text-4xl font-bold tracking-tight">Let's Build Something Awesome Together</p>
+          <div class="h-1 w-12 bg-portfolio-primary mx-auto rounded-full"></div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-5 space-y-6">
+            <h3 class="text-xl font-bold text-portfolio-text">Direct Channels</h3>
+            <p class="text-portfolio-muted text-sm md:text-base leading-relaxed">Have a clear project framework, API integration specification or scaling challenge? Connect instantly through any of these direct endpoints.</p>
+            <div class="space-y-4">
+              <a class="flex items-center space-x-4 p-4 rounded-xl glass-card border-portfolio-border hover:border-portfolio-primary/30 transition-all group" href="mailto:contact.codingraz@gmail.com">
+                <div class="w-10 h-10 rounded-lg bg-portfolio-primary/10 flex items-center justify-center text-portfolio-primary"> <i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <p class="text-xs text-portfolio-muted font-medium">Email Inbox</p>
+                  <p class="text-sm font-bold text-portfolio-text group-hover:text-portfolio-primary transition-colors">contact.codingraz@gmail.com</p>
+                </div>
+              </a>
+              <a class="flex items-center space-x-4 p-4 rounded-xl glass-card border-portfolio-border hover:border-portfolio-secondary/30 transition-all group" href="https://wa.me/+8801760104381" target="_blank" rel="noreferrer">
+                <div class="w-10 h-10 rounded-lg bg-portfolio-secondary/10 flex items-center justify-center text-portfolio-secondary"> <i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <p class="text-xs text-portfolio-muted font-medium">WhatsApp Secure Chat</p>
+                  <p class="text-sm font-bold text-portfolio-text group-hover:text-portfolio-secondary transition-colors">+880-1760104381</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl glass-card border-portfolio-border">
+            <form class="space-y-6" id="portfolio-contact-form">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-xs font-semibold text-portfolio-muted uppercase tracking-wider" for="form-input-name">Your Name</label>
+                  <input class="w-full px-4 py-3 rounded-xl bg-portfolio-bg border border-portfolio-border text-portfolio-text focus:outline-none focus:border-portfolio-primary transition-colors text-sm" id="form-input-name" required type="text" />
+                </div>
+                <div class="space-y-2">
+                  <label class="text-xs font-semibold text-portfolio-muted uppercase tracking-wider" for="form-input-email">Email Address</label>
+                  <input class="w-full px-4 py-3 rounded-xl bg-portfolio-bg border border-portfolio-border text-portfolio-text focus:outline-none focus:border-portfolio-primary transition-colors text-sm" id="form-input-email" required type="email" />
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label class="text-xs font-semibold text-portfolio-muted uppercase tracking-wider" for="form-input-msg">Message Blueprint Description</label>
+                <textarea class="w-full px-4 py-3 rounded-xl bg-portfolio-bg border border-portfolio-border text-portfolio-text focus:outline-none focus:border-portfolio-primary transition-colors text-sm h-32 resize-none" id="form-input-msg" required></textarea>
+              </div>
+              <button class="btn-primary-solid w-full py-4 rounded-xl font-medium transition-all transform hover:-translate-y-0.5 flex items-center justify-center space-x-2 text-sm" type="submit">
+                <span>Dispatch Message</span>
+                <i class="fa-solid fa-paper-plane text-xs"></i>
+              </button>
+              <div class="text-xs text-center text-portfolio-muted mt-2 hidden" id="form-response-status-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+</main>
+  <footer class="border-t border-portfolio-border py-12 glass-navbar relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left space-y-1">
+        <p class="text-sm text-portfolio-muted">&#169; 2026 Coding Raz. All Rights Reserved.</p>
+        <p class="text-[11px] text-portfolio-muted/60 tracking-wide">Made By Raz | Optimized Platform Integration Architecture</p>
+      </div>
+      <div class="flex items-center space-x-6 text-sm text-portfolio-muted">
+        <a class="hover:text-portfolio-secondary transition-colors" href="#hero">Top</a>
+        <a class="hover:text-portfolio-secondary transition-colors" href="#about">About</a>
+        <a class="hover:text-portfolio-secondary transition-colors" href="#portfolio">Projects</a>
+        <a class="hover:text-portfolio-secondary transition-colors" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <button aria-label="Scroll to top" class="btn-primary-solid fixed bottom-6 right-6 w-11 h-11 rounded-xl flex items-center justify-center shadow-xl opacity-0 translate-y-4 pointer-events-none transition-all duration-300 z-50 transform hover:-translate-y-1" id="back-to-top-scroller-btn"> <i class="fa-solid fa-arrow-up text-sm"></i></button>
+</body>
+</html>
