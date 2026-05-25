@@ -28,6 +28,11 @@ export function initRazAnimations() {
   if (typewriterTarget) setTimeout(runTypewriterIterationStep, 500);
 
   const filterActionButtons = Array.from(document.querySelectorAll(".filter-btn"));
+  const projectGridContainer = document.getElementById("project-grid-container");
+  if (projectGridContainer) {
+    const initialProjectCardOrder = Array.from(projectGridContainer.querySelectorAll(":scope > .project-card-item"));
+    initialProjectCardOrder.reverse().forEach((card) => projectGridContainer.appendChild(card));
+  }
   const projectCardNodes = Array.from(document.querySelectorAll(".project-card-item"));
   const FILTER_ANIMATION_MS = 360;
 
