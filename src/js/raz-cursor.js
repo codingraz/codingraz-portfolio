@@ -48,8 +48,11 @@ export function initRazCursor() {
     dotY += (targetY - dotY) * dotEasing;
     outlineX += (targetX - outlineX) * outlineEasing;
     outlineY += (targetY - outlineY) * outlineEasing;
-    cursorDot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
-    cursorOutline.style.transform = `translate3d(${outlineX}px, ${outlineY}px, 0) translate(-50%, -50%)`;
+    cursorDot.style.setProperty("--cursor-x", `${dotX}px`);
+    cursorDot.style.setProperty("--cursor-y", `${dotY}px`);
+
+    cursorOutline.style.setProperty("--cursor-x", `${outlineX}px`);
+    cursorOutline.style.setProperty("--cursor-y", `${outlineY}px`);
     requestAnimationFrame(renderCursorFrame);
   };
   requestAnimationFrame(renderCursorFrame);
